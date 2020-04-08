@@ -133,3 +133,6 @@ data/*.*
 
 # vscode
 .vscode
+
+# google api-key
+google-api-key.txt
