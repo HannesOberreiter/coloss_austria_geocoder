@@ -5,14 +5,25 @@ import time
 import pandas as pd
 import openpyxl
 import geopy
+import os.path
 
 import xlrd
 from geopy.extra.rate_limiter import RateLimiter
-from geopy.geocoders import Nominatim
+
 from tqdm import tqdm
 
+# use google if api key is present else use nominatim
+api_key_file = 'google-api-key.txt'
+if os.path.isfile(api_key_file):
+    from geopy.geocoders import GoogleV3
+    with open(api_key_file, 'r') as myfile:
+        key = myfile.read()
+    geolocator = GoogleV3(api_key=key)
+else:
+    from geopy.geocoders import Nominatim
+    geolocator = Nominatim(user_agent="geocode_coloss")
+
 # geopy settings
-geolocator = Nominatim(user_agent="geocode_coloss")
 geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1, max_retries=0)
 
 # progress bar
