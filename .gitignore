@@ -128,8 +128,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# output data
-data/*.*
+# output /input data
+data/data.xlsx
+data/output.xlsx
+# temp files
+data/~*.xlsx
 
 # vscode
 .vscode
