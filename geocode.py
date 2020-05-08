@@ -4,10 +4,11 @@ import time
 
 import pandas as pd
 import openpyxl
-import geopy
 import os.path
 
 import xlrd
+
+import geopy
 from geopy.extra.rate_limiter import RateLimiter
 from geopy.exc import GeocoderTimedOut
 
@@ -15,7 +16,6 @@ from tqdm import tqdm
 
 logger = logging.getLogger("root")
 logger.setLevel(logging.DEBUG)
-# create console handler
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 logger.addHandler(ch)
