@@ -7,6 +7,7 @@ Python script for geocoding the "string" location of the main wintering location
 ### First run install libraries
 
 ```cmd
+python3 -m venv env
 source env/bin/activate
 pip3 install -r requirements.txt
 ```

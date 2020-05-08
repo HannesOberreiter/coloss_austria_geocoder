@@ -1,11 +1,11 @@
 #import geopy.geocoder
 import logging
-import time
 
 import pandas as pd
-import openpyxl
 import os.path
 
+#import time
+import openpyxl
 import xlrd
 
 import geopy
