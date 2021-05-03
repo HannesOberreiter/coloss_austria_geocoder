@@ -1,5 +1,7 @@
 # Coloss - Austria - honey bee colony winter mortality evaluation
 
+**Archived** script is not used anymore, we now use the R Package TidyGeocoder as it fits more in our workflow.
+
 Python script for geocoding the "string" location of the main wintering location to geographical locations using geopy and nominatim or google maps service.
 
 ## How to use the script
